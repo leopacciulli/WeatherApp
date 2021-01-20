@@ -5,13 +5,14 @@ import * as Location from 'expo-location';
 import { Switch } from 'react-native-switch';
 import { CardInfo } from '../components/CardInfo';
 import { CardWeather } from '../components/CardWeather';
-import { Weather } from '../service/api';
 import { weatherConditions } from '../utils/Conditions';
-
-import splashImage from '../assets/splash.jpg';
 import { Background } from '../components/Background';
 
-export const WeatherApp = () => {
+import { Weather } from '../service/api';
+
+import splashImage from '../assets/splash.jpg';
+
+export const WeatherApp: React.FC = () => {
   const api = new Weather()
 
   const [measure, setMeasure] = useState('metric')
@@ -52,8 +53,7 @@ export const WeatherApp = () => {
     setErrorMsg('')
 
     const location = await Location.getCurrentPositionAsync({});
-    const weather: any = await api.getWeather(location, unitMeasure)
-    console.log("Dkko we", weather.data)
+    const weather = await api.getWeather(location, unitMeasure)
 
     setCurrentTemperature(weather.data.main.temp)
     setTemperatureMin(weather.data.main.temp_min)
