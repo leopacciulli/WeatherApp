@@ -9,7 +9,7 @@ import { Weather } from '../service/api';
 import { weatherConditions } from '../utils/Conditions';
 
 import splashImage from '../assets/splash.jpg';
-import weatherImage from '../assets/weather.jpg';
+import { Background } from '../components/Background';
 
 export const WeatherApp = () => {
   const api = new Weather()
@@ -53,6 +53,7 @@ export const WeatherApp = () => {
 
     const location = await Location.getCurrentPositionAsync({});
     const weather: any = await api.getWeather(location, unitMeasure)
+    console.log("Dkko we", weather.data)
 
     setCurrentTemperature(weather.data.main.temp)
     setTemperatureMin(weather.data.main.temp_min)
@@ -103,7 +104,9 @@ export const WeatherApp = () => {
           <ActivityIndicator size="large" color="#0864ee" />
         </View>
       }
-      <Image source={weatherImage} style={styles.image} />
+      
+      <Background condition={condition} />
+
       <View style={styles.header}>
         <View/>
         <TouchableOpacity onPress={() => initWeather(measure)}>
@@ -199,12 +202,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16
-  },
-  image: {
-    width: 400,
-    height: 370,
-    position: 'absolute',
-    top: 0,
   },
   header: {
     display: 'flex',
