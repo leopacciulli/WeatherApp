@@ -9,7 +9,7 @@ interface Props {
 export const Background: React.FC<Props> = ({ condition }) => {
 
   return (
-    <Image source={weatherConditions[condition].image} style={[styles.image, { width: Dimensions.get('window').width, height: Dimensions.get('window').height }]} />
+    <Image source={weatherConditions[condition] && weatherConditions[condition].image} style={[styles.image, { width: Dimensions.get('window').width, height: Dimensions.get('window').height }]} />
   );
 }
 

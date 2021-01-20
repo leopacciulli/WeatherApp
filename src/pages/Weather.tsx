@@ -92,7 +92,7 @@ export const WeatherApp = () => {
   if (initLoading) {
     return (
       <View style={[styles.loading, { width: Dimensions.get('window').width, height: Dimensions.get('window').height }]}>
-        <Image source={splashImage} resizeMode={'cover'} style={[styles.image, { width: Dimensions.get('window').width, height: Dimensions.get('window').height }]} />
+        <Image source={splashImage} resizeMode={'cover'} style={{ width: Dimensions.get('window').width, height: Dimensions.get('window').height }} />
       </View>
     )
   }
@@ -129,6 +129,7 @@ export const WeatherApp = () => {
         humidity={humidity}
         sunrise={sunrise}
         sunset={sunset}
+        condition={condition}
       />
 
       <View style={styles.switch}>

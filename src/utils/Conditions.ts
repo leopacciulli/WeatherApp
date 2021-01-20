@@ -10,28 +10,28 @@ import hail3 from '../assets/hail3.jpg';
 export const weatherConditions: any = {
     Rain: {
       color: '#005BEA',
-      infoColor: '#518CE7',
+      infoColor: '#828282',
       title: 'Chuvoso',
       icon: 'weather-rainy',
       image: rainy
     },
     Clear: {
       color: '#f7b733',
-      infoColor: '#F5C561',
+      infoColor: '#005BEA',
       title: 'Ensolarado',
       icon: 'weather-sunny',
       image: sunny
     },
     Thunderstorm: {
       color: '#616161',
-      infoColor: '#828282',
+      infoColor: '#5DAAF7',
       title: 'Trovoadas',
       icon: 'weather-lightning',
       image: lightning
     },
     Clouds: {
       color: '#1F1C2C',
-      infoColor: '#52505A',
+      infoColor: '#5DAAF7',
       title: 'Nublado',
       icon: 'weather-cloudy',
       image: clouds
@@ -45,21 +45,21 @@ export const weatherConditions: any = {
     },
     Drizzle: {
       color: '#076585',
-      infoColor: '#218CB0',
+      infoColor: '#999999',
       title: 'Chuvisco',
       icon: 'weather-hail',
       image: hail
     },
     Haze: {
       color: '#66A6FF',
-      infoColor: '#92B9EE',
+      infoColor: '#333',
       title: 'Nebliba',
       icon: 'weather-hail',
       image: hail2
     },
     Mist: {
       color: '#3CD3AD',
-      infoColor: '#5FE7C5',
+      infoColor: '#ccc',
       title: 'Névoa',
       icon: 'weather-fog',
       image: hail3

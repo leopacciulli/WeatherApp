@@ -8,12 +8,14 @@ import humidityImage from '../assets/humidity.png';
 import sunriseImage from '../assets/sunrise.png';
 import sunsetImage from '../assets/sunset.png';
 import windImage from '../assets/wind.png';
+import { weatherConditions } from '../utils/Conditions';
 
 interface Props {
 	wind: string
 	humidity: string
 	sunrise: number
 	sunset: number
+	condition: string
 }
 
 export const CardInfo: React.FC<Props> = ({
@@ -21,9 +23,10 @@ export const CardInfo: React.FC<Props> = ({
 	humidity,
 	sunrise,
 	sunset,
+	condition
 }) => {
   return (
-		<View style={styles.addInfo}>
+		<View style={[styles.addInfo, { backgroundColor: weatherConditions[condition] && weatherConditions[condition].infoColor }]}>
 			<View style={styles.info}>
 				<Image source={windImage} style={styles.imageInfo} />
 				<View>
@@ -64,7 +67,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     flexWrap: 'wrap',
     marginTop: 48,
-    backgroundColor: '#95BFF4',
     borderRadius: 16,
     padding: 8,
     opacity: 0.8,
