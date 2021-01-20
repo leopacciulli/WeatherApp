@@ -18,13 +18,15 @@ $ yarn
 $ yarn expo:android | yarn expo:ios
 ````
 <div align="center">
-  <img src="./src/assets/screen.jpeg" width="150px" />
+  <img src="./src/assets/screen.jpeg" width="150px" height="290px" style="margin: 20px" />
+  <img src="./src/assets/screen5.jpeg" width="150px" height="290px" style="margin: 20px" />
+  <img src="./src/assets/screen2.jpeg" width="150px" height="290px" style="margin: 20px" />
 </div>
 
 <br/>
 
 # 📂 Arquitetura / Estrutura de pastas
-- O projeto foi criado utilizando `yarn create react-native-app WeatherApp` (React Native / Hooks), rodando com Expo (já instalado atualmente nos novos projetos) inserindo no package.json os seguintes comando em scripts: "expo:android": "expo start --android" e "expo:ios": "expo start --ios".
+- O projeto foi criado utilizando `yarn create react-native-app WeatherApp` (React Native / Hooks), rodando com Expo inserindo no package.json os seguintes comando em scripts: "expo:android": "expo start --android" e "expo:ios": "expo start --ios".
 - Para utilização do Typescript foi instalado com o seguinte comando: `yarn add --dev typescript @types/react @types/react-native @types/react-dom`.
 - A estrutura de pastas foram distríbuidas dentro de `src`: <br/>
 `src/assets`: imagens e ícones; <br/>
