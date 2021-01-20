@@ -20,6 +20,7 @@ $ yarn expo:android | yarn expo:ios
 <div align="center">
   <img src="./src/assets/screen.jpeg" width="150px" height="290px" style="margin: 20px" />
   <img src="./src/assets/screen5.jpeg" width="150px" height="290px" style="margin: 20px" />
+  <img src="./src/assets/screen4.jpeg" width="150px" height="290px" style="margin: 20px" />
   <img src="./src/assets/screen2.jpeg" width="150px" height="290px" style="margin: 20px" />
 </div>
 
